@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Avalonia.Themes.Fluent;
 using AvaloniaDataGrid.ViewModels;
 using AvaloniaDataGrid.Views;
 
@@ -21,6 +22,11 @@ namespace AvaloniaDataGrid
                 {
                     DataContext = new MainWindowViewModel(),
                 };
+            }
+
+            if (Current != null)
+            {
+                Current.RequestedThemeVariant = Avalonia.Styling.ThemeVariant.Dark;
             }
 
             base.OnFrameworkInitializationCompleted();

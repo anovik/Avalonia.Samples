@@ -12,8 +12,8 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 	
-	<DataGrid Name="grid"  Items="{Binding Cities}"				
-			AutoGenerateColumns="False" IsReadOnly="True">		  
+	<DataGrid Name="grid"  ItemsSource="{Binding Cities}"				
+			AutoGenerateColumns="False" IsReadOnly="False">		  
 		<DataGrid.Columns>
 			<DataGridTextColumn Header="GeoNameID"  Binding="{Binding geonameid}" />
 			<DataGridTextColumn Header="Name"  Binding="{Binding name}"/>

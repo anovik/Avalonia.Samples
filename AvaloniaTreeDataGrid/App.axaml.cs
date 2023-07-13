@@ -23,6 +23,11 @@ namespace AvaloniaTreeDataGrid
                 };
             }
 
+            if (Current != null)
+            {
+                Current.RequestedThemeVariant = Avalonia.Styling.ThemeVariant.Dark;
+            }
+
             base.OnFrameworkInitializationCompleted();
         }
     }
